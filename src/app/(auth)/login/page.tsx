@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import { userLogin } from "@/services/actions/UserLogin";
 import { storeUserInfo } from "@/services/auth.service";
@@ -33,6 +34,7 @@ const Login = () => {
       } else if (res?.success === false) {
         toast.success(res?.message);
       }
+      //
     } catch (error) {}
   };
 
@@ -64,7 +66,7 @@ const Login = () => {
         </form>
         <div className="mt-2 text-center">
           <Link href="/register" className="text-sm text-blue-600">
-            Don't have an account? Register
+            {`Don't have an account? Register`}
           </Link>
         </div>
         <div className="mt-2 text-center">

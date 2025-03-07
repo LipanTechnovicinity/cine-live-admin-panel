@@ -2,7 +2,7 @@
 import { authKey } from "@/constants/authKey";
 import { disableUser, restoreUser } from "@/services/actions/Users";
 import { getLocalStorage } from "@/utils/local-storage";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { toast } from "sonner";
 
 const ToggleButton = ({
@@ -18,13 +18,11 @@ const ToggleButton = ({
   const toggleSwitch = async () => {
     setIsOn(!isOn);
     if (isOn !== true) {
-      
       const res = await restoreUser(accessToken as string, id);
       if (res?.status === "success") {
         toast.success("Enabled");
       }
     } else {
-      
       const res = await disableUser(accessToken as string, id);
       if (res?.status === "success") {
         toast.success("Disabled");

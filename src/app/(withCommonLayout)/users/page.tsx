@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"; // 👈 Ensures it runs on the client-side
 
 import { authKey } from "@/constants/authKey";

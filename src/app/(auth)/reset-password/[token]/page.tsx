@@ -10,11 +10,11 @@ export type TResetPasswordData = {
 const ForgotPassword = () => {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const { token } = useParams();
 
   const handleReset = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const { token } = useParams();
     console.log(token);
     const formData = {
       password: newPassword,
