@@ -1,10 +1,8 @@
 import { TUser } from "@/app/(withCommonLayout)/users/page";
 import Link from "next/link";
-import { useEffect } from "react";
 import ToggleButton from "../ToggleButton";
 
 export default function UserTable({ users }: { users: TUser[] }) {
-
   return (
     <div className="my-10 mx-45 w-full">
       <div className=" mb-4">
